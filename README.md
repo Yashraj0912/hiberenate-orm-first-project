@@ -22,7 +22,7 @@ A simple Java Hibernate project that connects to MySQL and saves student records
 docker run --name mysql-container \
   -e MYSQL_ROOT_PASSWORD=your_password \
   -e MYSQL_DATABASE=testdb \
-  -p 3307:3306 \
+  -p 3306:3306 \
   -d mysql:latest
 ```
 
@@ -37,7 +37,7 @@ docker run --name mysql-container \
 Located at `src/main/resources/hibernate.cfg.xml`:
 
 ```xml
-<property name="hibernate.connection.url">jdbc:mysql://localhost:3307/testdb</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/testdb</property>
 <property name="hibernate.connection.username">root</property>
 <property name="hibernate.connection.password">your_password</property>
 ```
@@ -67,7 +67,7 @@ java -jar target/hibernate-first-1.0-SNAPSHOT.jar
 ### 1. Pull the app image
 
 ```bash
-docker pull yashraj0912/hibernate-first-image:1.0
+docker pull yashraj0912/hibernate-first-image:
 ```
 
 ### 2. Build the app image (if building locally)
@@ -124,7 +124,7 @@ Image available at:
 [https://hub.docker.com/r/yashraj0912/hibernate-first-image](https://hub.docker.com/r/yashraj0912/hibernate-first-image)
 
 ```bash
-docker pull yashraj0912/hibernate-first-image:1.0
+docker pull yashraj0912/hibernate-first-image
 ```
 
 ---
